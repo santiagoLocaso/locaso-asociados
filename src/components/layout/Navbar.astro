@@ -7,9 +7,17 @@ import { navigation } from "../../config/navigation";
   class="fixed top-0 left-0 z-50 w-full border-b border-white/10 bg-(--color-dark)/95 backdrop-blur"
 >
   <nav class="mx-auto flex max-w-7xl items-center justify-between px-6 py-4">
-    <a href="/" class="text-xl font-semibold tracking-wide text-white">
-      {company.shortName}
-      <span class="text-(--color-primary)">y Asociados</span>
+    <a href="/" class="flex flex-col leading-none">
+      <span class="text-xl text-[30px] font-semibold tracking-wide text-white">
+        {company.shortName}
+        <span class="text-(--color-primary)"> y Asociados</span>
+      </span>
+
+      <span
+        class="mt-1 text-[15px] font-medium uppercase tracking-[0.45em] text-slate-400"
+      >
+        ABOGADOS
+      </span>
     </a>
 
     <div class="hidden items-center gap-8 md:flex">
@@ -17,7 +25,7 @@ import { navigation } from "../../config/navigation";
         navigation.map((item) => (
           <a
             href={item.href}
-            class="text-sm text-slate-200 hover:text-(--color-primary)"
+            class="text-sm text-[18px] text-slate-200 hover:text-(--color-primary)"
           >
             {item.title}
           </a>
@@ -27,7 +35,7 @@ import { navigation } from "../../config/navigation";
 
     <a
       href="/contacto"
-      class="hidden rounded-full bg-(--color-primary) px-5 py-2 text-sm font-semibold text-slate-950 transition hover:bg-(--color-primary-hover) md:block"
+      class="hidden rounded-full bg-(--color-primary) text-[18px] px-5 py-2 text-sm font-semibold text-slate-950 transition hover:bg-(--color-primary-hover) md:block"
     >
       Consultar
     </a>
