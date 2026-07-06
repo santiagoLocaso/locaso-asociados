@@ -1,11 +1,21 @@
 ---
-import Welcome from '../components/Welcome.astro';
-import Layout from '../layouts/Layout.astro';
-
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+import MainLayout from "../layouts/MainLayout.astro";
+import Hero from "../components/home/Hero.astro";
+import AboutPreview from "../components/home/AboutPreview.astro";
+import ServicesPreview from "../components/home/ServicesPreview.astro";
+import WhyChooseUs from "../components/home/WhyChooseUs.astro";
+import WorkProcess from "../components/home/WorkProcess.astro";
+import ContactCTA from "../components/home/ContactCTA.astro";
 ---
 
-<Layout>
-	<Welcome />
-</Layout>
+<MainLayout
+  title="Locaso y Asociados | Estudio Jurídico"
+  description="Asesoramiento jurídico en sociedades, fundaciones, asociaciones civiles y sociedades extranjeras."
+>
+  <Hero />
+  <AboutPreview />
+  <ServicesPreview />
+  <WhyChooseUs />
+  <WorkProcess />
+  <ContactCTA />
+</MainLayout>
