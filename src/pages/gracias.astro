@@ -1,0 +1,34 @@
+---
+import MainLayout from "../layouts/MainLayout.astro";
+---
+
+<MainLayout
+  title="Consulta enviada | Locaso y Asociados"
+  description="Tu consulta fue enviada correctamente."
+>
+  <section
+    class="flex min-h-screen items-center bg-(--color-dark) px-6 pt-24 text-white"
+  >
+    <div class="mx-auto max-w-3xl text-center">
+      <p
+        class="mb-4 text-sm font-semibold uppercase tracking-[0.3em] text-(--color-primary)"
+      >
+        Consulta enviada
+      </p>
+
+      <h1 class="text-4xl font-bold md:text-6xl">Gracias por contactarte</h1>
+
+      <p class="mt-6 text-lg leading-8 text-slate-300">
+        Recibimos tu consulta correctamente. Nos pondremos en contacto a la
+        brevedad.
+      </p>
+
+      <a
+        href="/"
+        class="mt-8 inline-flex rounded-full bg-(--color-primary) px-7 py-3 font-semibold text-slate-950 transition hover:bg-(--color-primary-hover)"
+      >
+        Volver al inicio
+      </a>
+    </div>
+  </section>
+</MainLayout>
