@@ -1,7 +1,12 @@
+---
+import { company } from "../../config/company";
+---
+
 <footer class="bg-(--color-dark) px-6 py-10 text-slate-300">
   <div class="mx-auto grid max-w-7xl gap-8 md:grid-cols-3">
     <div>
-      <h3 class="text-lg font-semibold text-white">Locaso y Asociados</h3>
+      <h3 class="text-lg font-semibold text-white">{company.name}</h3>
+
       <p class="mt-3 text-sm leading-6">
         Estudio jurídico especializado en sociedades, entidades civiles,
         fundaciones y trámites ante IGJ.
@@ -10,27 +15,38 @@
 
     <div>
       <h4 class="font-semibold text-white">Servicios</h4>
+
       <ul class="mt-3 space-y-2 text-sm">
         <li>
-          <a href="/servicios/sociedades" class="hover:text-(--color-primary)"
-            >Sociedades</a>
+          <a href="/servicios/sociedades" class="hover:text-(--color-primary)">
+            Sociedades
+          </a>
         </li>
+
         <li>
-          <a href="/servicios/fundaciones" class="hover:text-(--color-primary)"
-            >Fundaciones</a>
+          <a href="/servicios/fundaciones" class="hover:text-(--color-primary)">
+            Fundaciones
+          </a>
         </li>
+
         <li>
           <a
             href="/servicios/sociedades-extranjeras"
-            class="hover:text-(--color-primary)">Sociedades extranjeras</a>
+            class="hover:text-(--color-primary)"
+          >
+            Sociedades extranjeras
+          </a>
         </li>
       </ul>
     </div>
 
     <div>
       <h4 class="font-semibold text-white">Contacto</h4>
-      <p class="mt-3 text-sm">Email: contacto@locasoyasociados.com.ar</p>
-      <p class="mt-2 text-sm">Buenos Aires, Argentina</p>
+      <p class="mt-3 text-sm">Email: {company.email}</p>
+      <p class="mt-3 text-sm">Telefono: {company.phone}</p>
+      <p class="mt-3 text-sm">Whatsapp: {company.whatsapp}</p>
+      <p class="mt-3 text-sm">Dirección: {company.address}</p>
+      <p class="mt-2 text-sm">{company.city}</p>
     </div>
   </div>
 </footer>

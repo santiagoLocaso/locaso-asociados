@@ -1,0 +1,23 @@
+---
+const { label, title, paragraphs } = Astro.props;
+---
+
+<section class="bg-white px-6 py-24">
+  <div class="mx-auto grid max-w-7xl gap-12 md:grid-cols-[0.8fr_1.2fr]">
+    <div>
+      <p
+        class="mb-3 text-sm font-semibold uppercase tracking-[0.25em] text-(--color-primary)"
+      >
+        {label}
+      </p>
+
+      <h2 class="text-3xl font-bold text-slate-950 md:text-5xl">
+        {title}
+      </h2>
+    </div>
+
+    <div class="space-y-5 text-lg leading-8 text-slate-600">
+      {paragraphs.map((paragraph: unknown) => <p>{paragraph}</p>)}
+    </div>
+  </div>
+</section>

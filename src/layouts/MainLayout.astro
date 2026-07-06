@@ -2,11 +2,10 @@
 import "../styles/global.css";
 import Navbar from "../components/layout/Navbar.astro";
 import Footer from "../components/layout/Footer.astro";
+import { defaultSeo } from "../config/seo";
 
-const {
-  title = "Locaso y Asociados",
-  description = "Estudio jurídico especializado en sociedades, fundaciones, asociaciones civiles y trámites ante IGJ.",
-} = Astro.props;
+const { title = defaultSeo.title, description = defaultSeo.description } =
+  Astro.props;
 ---
 
 <html lang="es">

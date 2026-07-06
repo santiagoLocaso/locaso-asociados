@@ -1,0 +1,20 @@
+---
+import MainLayout from "../../layouts/MainLayout.astro";
+import ServiceHero from "../../components/services/ServiceHero.astro";
+import ServiceIntro from "../../components/services/ServiceIntro.astro";
+import InfoGrid from "../../components/services/InfoGrid.astro";
+import FAQ from "../../components/services/FAQ.astro";
+import ServiceCTA from "../../components/services/ServiceCTA.astro";
+import { sociedadesExtranjerasPage } from "../../data/services/sociedadesExtranjeras";
+---
+
+<MainLayout
+  title="Sociedades Extranjeras | Locaso y Asociados"
+  description="Inscripción de sociedades extranjeras, Art. 118, Art. 123, adecuación, rúbrica de libros, cancelación y cambio de representante legal."
+>
+  <ServiceHero {...sociedadesExtranjerasPage.hero} />
+  <ServiceIntro {...sociedadesExtranjerasPage.intro} />
+  <InfoGrid {...sociedadesExtranjerasPage.grid} />
+  <FAQ {...sociedadesExtranjerasPage.faq} />
+  <ServiceCTA {...sociedadesExtranjerasPage.cta} />
+</MainLayout>

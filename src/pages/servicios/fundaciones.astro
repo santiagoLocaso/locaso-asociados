@@ -1,0 +1,20 @@
+---
+import MainLayout from "../../layouts/MainLayout.astro";
+import ServiceHero from "../../components/services/ServiceHero.astro";
+import ServiceIntro from "../../components/services/ServiceIntro.astro";
+import InfoGrid from "../../components/services/InfoGrid.astro";
+import ServiceCTA from "../../components/services/ServiceCTA.astro";
+import { fundacionesPage } from "../../data/services/fundaciones";
+import FAQ from "../../components/services/FAQ.astro";
+---
+
+<MainLayout
+  title="Fundaciones y Asociaciones Civiles | Locaso y Asociados"
+  description="Constitución de fundaciones, asociaciones civiles, ONG, modificaciones estatutarias, cambio de sede y trámites ante IGJ."
+>
+  <ServiceHero {...fundacionesPage.hero} />
+  <ServiceIntro {...fundacionesPage.intro} />
+  <InfoGrid {...fundacionesPage.grid} />
+  <FAQ {...fundacionesPage.faq} />
+  <ServiceCTA {...fundacionesPage.cta} />
+</MainLayout>

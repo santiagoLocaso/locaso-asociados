@@ -1,0 +1,20 @@
+---
+import MainLayout from "../../layouts/MainLayout.astro";
+import ServiceHero from "../../components/services/ServiceHero.astro";
+import ServiceIntro from "../../components/services/ServiceIntro.astro";
+import InfoGrid from "../../components/services/InfoGrid.astro";
+import ServiceCTA from "../../components/services/ServiceCTA.astro";
+import { sociedadesPage } from "../../data/services/sociedades";
+import FAQ from "../../components/services/FAQ.astro";
+---
+
+<MainLayout
+  title="Sociedades Comerciales | Locaso y Asociados"
+  description="Constitución de SRL, SA, SAS, SAU, reformas societarias, variaciones de capital, cesiones e inscripciones ante IGJ."
+>
+  <ServiceHero {...sociedadesPage.hero} />
+  <ServiceIntro {...sociedadesPage.intro} />
+  <InfoGrid {...sociedadesPage.grid} />
+  <FAQ {...sociedadesPage.faq} />
+  <ServiceCTA {...sociedadesPage.cta} />
+</MainLayout>

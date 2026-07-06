@@ -1,0 +1,21 @@
+---
+const { label, title, description } = Astro.props;
+---
+
+<section class="bg-(--color-dark) px-6 pb-24 pt-40 text-white">
+  <div class="mx-auto max-w-7xl">
+    <p
+      class="mb-4 text-sm font-semibold uppercase tracking-[0.3em] text-(--color-primary)"
+    >
+      {label}
+    </p>
+
+    <h1 class="max-w-5xl text-4xl font-bold leading-tight md:text-6xl">
+      {title}
+    </h1>
+
+    <p class="mt-6 max-w-3xl text-lg leading-8 text-slate-300">
+      {description}
+    </p>
+  </div>
+</section>
