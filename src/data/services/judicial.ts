@@ -17,9 +17,9 @@ export const judicialPage = {
 
   grid: {
     label: "Servicios incluidos",
-    title: "Áreas de intervención judicial",
+    title: "Áreas de intervención jurídica",
     description:
-      "Asesoramos y representamos a nuestros clientes en distintas ramas del derecho, tanto en instancias preventivas como en procesos judiciales.",
+      "Asesoramos y representamos a nuestros clientes en distintas ramas del derecho, tanto en instancias preventivas como en procesos jurídicos.",
     items: [
       {
         title: "Derecho Civil",
@@ -68,7 +68,7 @@ export const judicialPage = {
     title: "Preguntas frecuentes",
     items: [
       {
-        question: "¿Atienden consultas judiciales de particulares y empresas?",
+        question: "¿Atienden consultas jurídicas de particulares y empresas?",
         answer:
           "Sí. Brindamos asesoramiento tanto a personas como a empresas, evaluando cada caso para definir la estrategia legal más conveniente.",
       },
@@ -87,7 +87,7 @@ export const judicialPage = {
 
   cta: {
     label: "Consulta inicial",
-    title: "¿Necesitás asesoramiento judicial?",
+    title: "¿Necesitás asesoramiento jurídico?",
     description:
       "Podemos analizar tu caso, evaluar la documentación disponible y definir los pasos legales más adecuados.",
     buttonText: "Solicitar asesoramiento",

@@ -7,7 +7,7 @@ export const services = [
   },
   {
     title: "Jurídico",
-    href: "/servicios/judicial",
+    href: "/servicios/juridico",
     description:
       "Asesoramiento y representación en Derecho Civil, Comercial, Laboral | CABA y Provincia de Buenos Aires.",
   },
