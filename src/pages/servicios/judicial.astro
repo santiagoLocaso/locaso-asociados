@@ -1,0 +1,20 @@
+---
+import MainLayout from "../../layouts/MainLayout.astro";
+import ServiceHero from "../../components/services/ServiceHero.astro";
+import ServiceIntro from "../../components/services/ServiceIntro.astro";
+import InfoGrid from "../../components/services/InfoGrid.astro";
+import FAQ from "../../components/services/FAQ.astro";
+import ServiceCTA from "../../components/services/ServiceCTA.astro";
+import { judicialPage } from "../../data/services/judicial";
+---
+
+<MainLayout
+  title="Jurídico | Locaso y Asociados"
+  description="Asesoramiento y representación en derecho civil, Comercial, Laboral | CABA y Provincia de Buenos Aires."
+>
+  <ServiceHero {...judicialPage.hero} />
+  <ServiceIntro {...judicialPage.intro} />
+  <InfoGrid {...judicialPage.grid} />
+  <FAQ {...judicialPage.faq} />
+  <ServiceCTA {...judicialPage.cta} />
+</MainLayout>

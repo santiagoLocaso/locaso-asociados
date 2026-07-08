@@ -1,15 +1,10 @@
 import { defineConfig } from "astro/config";
 import tailwindcss from "@tailwindcss/vite";
-
-const isGitHubPages = process.env.DEPLOY_TARGET === "github-pages";
+import sitemap from "@astrojs/sitemap";
 
 export default defineConfig({
-  site: isGitHubPages
-    ? "https://santiagolocaso.github.io"
-    : "https://locasoyasociados.com.ar",
-
-  base: isGitHubPages ? "/locaso-asociados" : "/",
-
+  site: "https://locasoyasociados.com.ar",
+  integrations: [sitemap()],
   vite: {
     plugins: [tailwindcss()],
   },

@@ -1,20 +1,14 @@
 export const services = [
   {
-    title: "Sociedades comerciales",
-    href: "/servicios/sociedades",
+    title: "Derecho Societario",
+    href: "/servicios/societario",
     description:
-      "Constitución de SRL, SA, SAS, SAU, modificaciones societarias y trámites ante IGJ.",
+      "Constitución de sociedades, fundaciones, asociaciones civiles, sociedades extranjeras, modificaciones societarias y trámites ante IGJ.",
   },
   {
-    title: "Fundaciones y asociaciones civiles",
-    href: "/servicios/fundaciones",
+    title: "Jurídico",
+    href: "/servicios/judicial",
     description:
-      "Constitución, modificación de estatutos, cambio de sede y nombramiento de autoridades.",
-  },
-  {
-    title: "Sociedades extranjeras",
-    href: "/servicios/sociedades-extranjeras",
-    description:
-      "Inscripciones Art. 118, Art. 123, adecuación, rúbrica de libros y representantes legales.",
+      "Asesoramiento y representación en derecho civil, Comercial, Laboral | CABA y Provincia de Buenos Aires.",
   },
 ];

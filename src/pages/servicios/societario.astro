@@ -1,0 +1,20 @@
+---
+import MainLayout from "../../layouts/MainLayout.astro";
+import ServiceHero from "../../components/services/ServiceHero.astro";
+import ServiceIntro from "../../components/services/ServiceIntro.astro";
+import InfoGrid from "../../components/services/InfoGrid.astro";
+import FAQ from "../../components/services/FAQ.astro";
+import ServiceCTA from "../../components/services/ServiceCTA.astro";
+import { societarioPage } from "../../data/services/societario";
+---
+
+<MainLayout
+  title="Derecho Societario | Locaso y Asociados"
+  description="Asesoramiento en derecho societario, constitución de sociedades, fundaciones, asociaciones civiles, sociedades extranjeras y trámites ante IGJ."
+>
+  <ServiceHero {...societarioPage.hero} />
+  <ServiceIntro {...societarioPage.intro} />
+  <InfoGrid {...societarioPage.grid} />
+  <FAQ {...societarioPage.faq} />
+  <ServiceCTA {...societarioPage.cta} />
+</MainLayout>
