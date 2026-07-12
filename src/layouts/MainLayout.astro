@@ -4,33 +4,71 @@ import Navbar from "../components/layout/Navbar.astro";
 import Footer from "../components/layout/Footer.astro";
 import { defaultSeo } from "../config/seo";
 
-const { title = defaultSeo.title, description = defaultSeo.description } =
-  Astro.props;
+interface Props {
+  title?: string;
+  description?: string;
+  image?: string;
+  noindex?: boolean;
+}
+
+const {
+  title = defaultSeo.title,
+  description = defaultSeo.description,
+  image = defaultSeo.image,
+  noindex = false,
+} = Astro.props as Props;
+
+const canonicalURL = new URL(Astro.url.pathname, Astro.site);
+const socialImageURL = new URL(image, Astro.site);
 ---
 
 <html lang="es">
   <head>
     <meta charset="UTF-8" />
-    <meta name="description" content={description} />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta property="og:title" content="Locaso y Asociados" />
-    <meta
-      property="og:description"
-      content="Estudio jurídico especializado en derecho societario y jurídico."
-    />
-    <meta property="og:image" content="/og-image.png" />
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://locasoyasoc.com.ar" />
-    <link rel="icon" type="image/png" href="/favicon.png" />
-    <link rel="apple-touch-icon" href="/favicon.png" />
+
     <title>{title}</title>
+    <meta name="description" content={description} />
+
+    <link rel="canonical" href={canonicalURL} />
+
+    {noindex && <meta name="robots" content="noindex, nofollow" />}
+
+    <link rel="icon" type="image/png" href="/favicon.png" />
+    <link rel="shortcut icon" href="/favicon.ico" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <link rel="sitemap" href="/sitemap-index.xml" />
+
+    <meta
+      name="keywords"
+      content="abogados, estudio jurídico, derecho societario, derecho civil, derecho laboral, derecho comercial, fundaciones, sociedades, sucesiones, IGJ, Buenos Aires"
+    />
+    <meta name="author" content="Locaso y Asociados" />
+    <meta property="og:locale" content="es_AR" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Locaso y Asociados" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonicalURL} />
+    <meta property="og:image" content={socialImageURL} />
+    <meta
+      property="og:image:alt"
+      content="Locaso y Asociados - Estudio Jurídico"
+    />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={socialImageURL} />
   </head>
 
   <body>
     <Navbar />
+
     <main>
       <slot />
     </main>
+
     <Footer />
   </body>
 </html>
