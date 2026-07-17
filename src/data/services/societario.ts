@@ -102,7 +102,7 @@ export const societarioPage = {
     label: "Consulta inicial",
     title: "¿Necesitás asesoramiento societario?",
     description:
-      "Podemos analizar la situación de tu sociedad, fundación, asociación o proyecto y definir el trámite jurídico más adecuado.",
+      "Podemos analizar la situación de la sociedad, fundación, asociación o proyecto y definir lo adecuado.",
     buttonText: "Solicitar asesoramiento",
     href: "/contacto",
   },
