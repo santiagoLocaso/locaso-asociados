@@ -6,7 +6,7 @@ const { label, title, description, items } = Astro.props;
   <div class="mx-auto max-w-7xl">
     <div class="max-w-3xl">
       <p
-        class="mb-3 text-sm font-semibold uppercase tracking-[0.25em] text-(--color-primary)"
+        class="mb-3 text-sm font-semibold uppercase tracking-[0.25em] text-(--color-primary-dark)"
       >
         {label}
       </p>
@@ -33,7 +33,7 @@ const { label, title, description, items } = Astro.props;
           }) => (
             <article class="rounded-3xl border border-slate-200 bg-white p-7 shadow-sm">
               {item.badge && (
-                <span class="text-sm font-semibold uppercase tracking-[0.2em] text-(--color-primary)">
+                <span class="text-sm font-semibold uppercase tracking-[0.2em] text-(--color-primary-dark)">
                   {item.badge}
                 </span>
               )}
@@ -50,8 +50,8 @@ const { label, title, description, items } = Astro.props;
                 <ul class="mt-6 space-y-3 text-slate-600">
                   {item.items.map((point: unknown) => (
                     <li class="flex gap-3">
-                      <span class="mt-1 text-(--color-primary)">•</span>
-                      <span>{point}</span>
+                      <span class="mt-1 text-(--color-primary-dark)">•</span>
+                      <span class="font-semibold text-slate-700">{point}</span>
                     </li>
                   ))}
                 </ul>
