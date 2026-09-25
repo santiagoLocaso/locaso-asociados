@@ -7,6 +7,7 @@ import { defaultSeo } from "../config/seo";
 interface Props {
   title?: string;
   description?: string;
+  keywords?: string;
   image?: string;
   noindex?: boolean;
 }
@@ -14,6 +15,7 @@ interface Props {
 const {
   title = defaultSeo.title,
   description = defaultSeo.description,
+  keywords = "abogados, estudio jurídico, derecho societario, derecho civil, derecho laboral, derecho comercial, fundaciones, sociedades, sucesiones, IGJ, Buenos Aires",
   image = defaultSeo.image,
   noindex = false,
 } = Astro.props as Props;
@@ -39,10 +41,7 @@ const socialImageURL = new URL(image, Astro.site);
     <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
     <link rel="sitemap" href="/sitemap-index.xml" />
 
-    <meta
-      name="keywords"
-      content="abogados, estudio jurídico, derecho societario, derecho civil, derecho laboral, derecho comercial, fundaciones, sociedades, sucesiones, IGJ, Buenos Aires"
-    />
+    <meta name="keywords" content={keywords} />
     <meta name="author" content="Locaso y Asociados" />
     <meta property="og:locale" content="es_AR" />
     <meta property="og:type" content="website" />
