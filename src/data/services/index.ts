@@ -11,4 +11,10 @@ export const services = [
     description:
       "Asesoramiento y representación en Derecho Civil, Comercial, Laboral | CABA y Provincia de Buenos Aires.",
   },
+  {
+    title: "Propiedad Industrial e Intelectual",
+    href: "/servicios/propiedad-industrial-intelectual",
+    description:
+      "Marcas, patentes, modelos de utilidad, modelos y diseños industriales. Derechos de autor.",
+  },
 ];

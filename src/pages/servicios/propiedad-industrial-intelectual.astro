@@ -1,0 +1,20 @@
+---
+import MainLayout from "../../layouts/MainLayout.astro";
+import ServiceHero from "../../components/services/ServiceHero.astro";
+import ServiceIntro from "../../components/services/ServiceIntro.astro";
+import InfoGrid from "../../components/services/InfoGrid.astro";
+import FAQ from "../../components/services/FAQ.astro";
+import ServiceCTA from "../../components/services/ServiceCTA.astro";
+import { propiedadIndustrialPage } from "../../data/services/propiedadIndustrialIntelectual";
+---
+
+<MainLayout
+  title="Propiedad Industrial e Intelectual | Locaso y Asociados"
+  description="Asesoramiento para la protección, gestión y defensa de marcas, patentes, modelos de utilidad, modelos y diseños industriales y derechos de autor."
+>
+  <ServiceHero {...propiedadIndustrialPage.hero} />
+  <ServiceIntro {...propiedadIndustrialPage.intro} />
+  <InfoGrid {...propiedadIndustrialPage.grid} />
+  <FAQ {...propiedadIndustrialPage.faq} />
+  <ServiceCTA {...propiedadIndustrialPage.cta} />
+</MainLayout>
